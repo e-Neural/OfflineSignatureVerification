@@ -9,14 +9,14 @@ function Result(props) {
 
 
     let field = <div></div>;
-    let signatureVerdict = (props.threshold !== undefined && props.distance <= props.threshold) ? "Signature is authentic" : "Signature does not match to this customer id";
+    let signatureVerdict = (props.threshold !== undefined && props.distance <= props.threshold) ? "Assinatura é autêntica" : "A assinatura não corresponde a este ID de cliente";
 
     if (props.threshold !== undefined)
 
         field = <div className="ResultContainer">
-            <h4>Result</h4>
-            <p>Signature threshold: {props.threshold}<br />
-                    Image distance to closest database signature: <label style={{ color: (props.distance <= props.threshold ? "green" : "red") }}>{props.distance}</label>
+            <h4>Resultado</h4>
+            <p>Assinatura threshold: {props.threshold}<br />
+                    Distância da imagem similar: <label style={{ color: (props.distance <= props.threshold ? "green" : "red") }}>{props.distance}</label>
             </p>
             <p style={{ color: (props.distance <= props.threshold ? "green" : "red") }}>{signatureVerdict}</p>
         </div>;
