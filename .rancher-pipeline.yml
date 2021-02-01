@@ -1,0 +1,18 @@
+stages:
+- name: Build
+  steps:
+  - runScriptConfig:
+      image: node:14
+      shellScript: |-
+        npm install
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: e-neural-facebook:${CICD_EXECUTION_SEQUENCE}
+- name: Deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deploy/deployment.yaml
+

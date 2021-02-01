@@ -1,4 +1,4 @@
-## Offline Writer Independent signature verification
+## Offline Writer Independent Verificação de Assinatura
 
 ### Setting up locally
 
@@ -41,7 +41,7 @@ Images were grouped in pairs of genuine and forged images, where the label was 1
 
 
 ### Dataset
-The CEDAR signature dataset is one of the benchmark datasets for signature verification. It consists of 24 genuine and forged signatures each from 55 different signers.
+The CEDAR signature dataset is one of the benchmark datasets for Verificação de Assinatura. It consists of 24 genuine and forged signatures each from 55 different signers.
 
 [Dataset link](http://www.cedar.buffalo.edu/NIJ/data/signatures.rar)
 
