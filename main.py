@@ -38,7 +38,8 @@ def main():
     cursor.execute(CREATE_TABLE)
     cursor.connection.commit()
     # For heroku, remove this line. We'll use gunicorn to run the app
-    app.run() # app.run(debug=True) 
+    # app.run() # app.run(debug=True) 
+    app.run(host='0.0.0.0', port=5050)
 
 @app.route('/')
 def index():
